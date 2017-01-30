@@ -42,8 +42,8 @@ subscription.dispose();
 
 /* Using a disposable */
 var source = Rx.Observable.create(function (observer) {
-    observer.onNext(42);
-    observer.onCompleted();
+    observer.next(42);
+    observer.complete();
 
     // Note that this is optional, you do not have to return this if you require no cleanup
     return Rx.Disposable.create(function () {
