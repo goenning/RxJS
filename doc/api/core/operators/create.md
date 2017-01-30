@@ -13,8 +13,8 @@ Creates an observable sequence from a specified subscribe method implementation.
 ```js
 /* Using a function */
 var source = Rx.Observable.create(function (observer) {
-    observer.onNext(42);
-    observer.onCompleted();
+    observer.next(42);
+    observer.complete();
 
     // Note that this is optional, you do not have to return this if you require no cleanup
     return function () {
